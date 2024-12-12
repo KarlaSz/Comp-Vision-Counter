@@ -1,6 +1,74 @@
+#ENG lang
+
+
+# Object Detector with OpenCV
+
+This project implements a real-time object detector using the OpenCV library. The project is written in Python and uses an embedded webcam for image analysis.
+
+## Requirements
+
+* **Python 3.6+**.
+* **Python libraries:**.
+    * `opencv-python` or `opencv-contrib-python` (for image handling and detection algorithms).
+    * `numpy` (for numerical calculations).
+
+    * _Recommended installation_ `opencv-contrib-python` as it contains GUI modules (for displaying the camera window).
+
+## Installation
+
+1 ** Clone the repository:**.
+    ``bash
+    git clone https://github.com/KarlaSz/Comp-Vision-Counter.git
+    cd Comp-Vision-Counter
+    ```
+
+2. ** **Create and activate a virtual environment (recommended):**.
+    ``bash
+    python -m venv env
+    # Windows
+    envv scripts
+    # Linux/macOS
+    source env/bin/activate
+    ```
+
+3 ** Install dependencies:**.
+    ``bash
+    pip install opencv-contrib-python numpy
+    ```
+
+
+## Running
+
+
+
+cv2.error: The function is not implemented....
+
+This error indicates that OpenCV was not built with GUI support.
+
+Solution: install opencv-contrib-python, as it contains the needed GUI modules:
+
+pip uninstall opencv-python
+pip install opencv-contrib-python
+content_copy
+
+
+Alternatively, try upgrading opencv-python to the latest version:
+
+pip install --upgrade opencv-python
+content_copy
+Use code with caution.
+Bash
+
+You can try setting the back-end oki
+
+Translated with DeepL.com (free version)
+
+
+#PL lang
+
 # Detektor Obiektów z OpenCV
 
-Ten projekt implementuje detektor obiektów w czasie rzeczywistym z wykorzystaniem biblioteki OpenCV oraz modelu YOLO (You Only Look Once). Projekt jest napisany w języku Python i wykorzystuje wbudowaną kamerę internetową do analizy obrazu.
+Ten projekt implementuje detektor obiektów w czasie rzeczywistym z wykorzystaniem biblioteki OpenCV. Projekt jest napisany w języku Python i wykorzystuje wbudowaną kamerę internetową do analizy obrazu.
 
 ## Wymagania
 
