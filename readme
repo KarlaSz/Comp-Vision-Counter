@@ -1,0 +1,112 @@
+# Detektor Obiektów z OpenCV
+
+Ten projekt implementuje detektor obiektów w czasie rzeczywistym z wykorzystaniem biblioteki OpenCV oraz modelu YOLO (You Only Look Once). Projekt jest napisany w języku Python i wykorzystuje wbudowaną kamerę internetową do analizy obrazu.
+
+## Wymagania
+
+*   **Python 3.6+**
+*   **Biblioteki Python:**
+    *   `opencv-python` lub `opencv-contrib-python` (do obsługi obrazu i algorytmów detekcji)
+    *   `numpy` (do obliczeń numerycznych)
+
+    *  _Zalecana instalacja_ `opencv-contrib-python`, ponieważ zawiera moduły GUI (do wyświetlania okna z kamerą).
+
+## Instalacja
+
+1.  **Sklonuj repozytorium:**
+    ```bash
+    git clone https://github.com/KarlaSz/Comp-Vision-Counter.git
+    cd Comp-Vision-Counter
+    ```
+
+2.  **Stwórz i aktywuj środowisko wirtualne (zalecane):**
+    ```bash
+    python -m venv env
+    # Windows
+    env\Scripts\activate
+    # Linux/macOS
+    source env/bin/activate
+    ```
+
+3.  **Zainstaluj zależności:**
+    ```bash
+    pip install opencv-contrib-python numpy
+    ```
+
+
+## Uruchomienie
+
+
+
+cv2.error: The function is not implemented...
+
+Ten błąd oznacza, że OpenCV nie został zbudowany z obsługą interfejsu graficznego (GUI).
+
+Rozwiązanie: Zainstaluj opencv-contrib-python, ponieważ zawiera potrzebne moduły GUI:
+
+pip uninstall opencv-python
+pip install opencv-contrib-python
+content_copy
+
+
+Alternatywnie, spróbuj zaktualizować opencv-python do najnowszej wersji:
+
+pip install --upgrade opencv-python
+content_copy
+Use code with caution.
+Bash
+
+Możesz spróbować ustawić back-end okienkowy na cv2.WINDOW_NORMAL dodając cv2.namedWindow("Frame", cv2.WINDOW_NORMAL) przed wywołaniem cv2.imshow.
+
+ERROR: Could not find a version that satisfies the requirement cv2 lub ERROR: No matching distribution found for cv2
+
+Ten błąd oznacza, że próbujesz zainstalować pakiet o niepoprawnej nazwie.
+
+Rozwiązanie: Zainstaluj pakiet opencv-python lub opencv-contrib-python zamiast cv2:
+
+pip install opencv-python
+content_copy
+Use code with caution.
+Bash
+
+lub
+
+pip install opencv-contrib-python
+content_copy
+Use code with caution.
+Bash
+
+Inne problemy:
+
+Upewnij się, że masz prawidłowo zainstalowane biblioteki w swoim środowisku wirtualnym.
+
+
+Otwarcie kamery:
+
+Skrypt otwiera kamerę internetową za pomocą cv2.VideoCapture().
+
+Pętla detekcji:
+
+W pętli pobierane są kolejne klatki z kamery.
+
+Klatka jest przetwarzana przez sieć  w celu detekcji obiektów.
+
+Wyryte obiekty są zaznaczane na klatce, wraz z ich etykietami.
+
+Wyświetlana jest przetworzona klatka.
+
+Zamykanie okna poprzez wciśnięcie q.
+
+Zwolnienie zasobów:
+
+Po zamknięciu pętli, kamera i okna są zwalniane.
+
+Przyszłe ulepszenia
+
+Implementacja licznika wykrytych obiektów
+
+Poprawa dokładności detekcji
+
+Dodanie możliwości przetwarzania filmów zamiast tylko kamery
+
+Dodanie GUI
